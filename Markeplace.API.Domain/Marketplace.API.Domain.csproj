@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="..\Marketplace.API.Domain\Domain\" />
+    <Folder Include="..\Marketplace.API.Domain\RepositoriesContracts\" />
+    <Folder Include="Domain\" />
+    <Folder Include="RepositoriesContracts\" />
+  </ItemGroup>
+</Project>
