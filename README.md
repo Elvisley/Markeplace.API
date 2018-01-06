@@ -1,2 +1,2 @@
 # Markeplace.API
-Microservice marketplace
+Microservice specialize for marketplace management
