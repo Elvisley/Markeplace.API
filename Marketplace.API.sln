@@ -1,15 +1,15 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.API.Domain", "Markeplace.API.Domain\Marketplace.API.Domain.csproj", "{E6584F53-7AF6-4BA5-8CC4-6712B2D7A355}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.API.Infrastructure", "Markeplace.API.Infra\Marketplace.API.Infrastructure.csproj", "{0ECCFC40-0766-4584-A58F-00200B9CA7F1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.API.Aplication", "Marketplace.API.Aplication\Marketplace.API.Aplication.csproj", "{93EB047F-2535-41F3-85A5-1B927CA8AB79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.API.CrossCutting", "Marketplace.API.CrossCutting\Marketplace.API.CrossCutting.csproj", "{7B2038E4-B98A-41C7-81B7-3D99B5C96D8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.API.Service", "Marketplace.API.Service\Marketplace.API.Service.csproj", "{D756A881-3C2D-4EFD-8B43-6D7D5A752C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.API.Domain", "Marketplace.API.Domain\Marketplace.API.Domain.csproj", "{0B275908-E40D-4FB1-8F31-5D7C4089B431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.API.Infrastructure", "Marketplace.API.Infrastructure\Marketplace.API.Infrastructure.csproj", "{02E8D7FB-0541-4E1B-BDA7-06160CEDD7A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E6584F53-7AF6-4BA5-8CC4-6712B2D7A355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E6584F53-7AF6-4BA5-8CC4-6712B2D7A355}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E6584F53-7AF6-4BA5-8CC4-6712B2D7A355}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E6584F53-7AF6-4BA5-8CC4-6712B2D7A355}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0ECCFC40-0766-4584-A58F-00200B9CA7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0ECCFC40-0766-4584-A58F-00200B9CA7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0ECCFC40-0766-4584-A58F-00200B9CA7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0ECCFC40-0766-4584-A58F-00200B9CA7F1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93EB047F-2535-41F3-85A5-1B927CA8AB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{93EB047F-2535-41F3-85A5-1B927CA8AB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93EB047F-2535-41F3-85A5-1B927CA8AB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,6 +29,14 @@ Global
 		{D756A881-3C2D-4EFD-8B43-6D7D5A752C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D756A881-3C2D-4EFD-8B43-6D7D5A752C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D756A881-3C2D-4EFD-8B43-6D7D5A752C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B275908-E40D-4FB1-8F31-5D7C4089B431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B275908-E40D-4FB1-8F31-5D7C4089B431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B275908-E40D-4FB1-8F31-5D7C4089B431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B275908-E40D-4FB1-8F31-5D7C4089B431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E8D7FB-0541-4E1B-BDA7-06160CEDD7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E8D7FB-0541-4E1B-BDA7-06160CEDD7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E8D7FB-0541-4E1B-BDA7-06160CEDD7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E8D7FB-0541-4E1B-BDA7-06160CEDD7A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0

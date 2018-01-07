@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Marketplace.API.Domain
+namespace Marketplace.API.Infrastructure
 {
     class Program
     {
