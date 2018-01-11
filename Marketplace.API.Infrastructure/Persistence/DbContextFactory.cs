@@ -13,7 +13,7 @@ namespace Marketplace.API.Infrastructure.Persistence
         public MarketplaceContext CreateDbContext(string[] args)
         {
             var builder = new DbContextOptionsBuilder<MarketplaceContext>();
-            builder.UseMySql("Server=myServerAddress;Database=myDataBase;Uid=myUsername;Pwd=myPassword;");
+            builder.UseMySql("Server=localhost;Database=DB_MKTPLACE;Uid=root;Pwd=123456");
             return new MarketplaceContext(builder.Options);
         }
     }
