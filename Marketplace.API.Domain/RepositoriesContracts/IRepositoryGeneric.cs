@@ -9,10 +9,11 @@ namespace Marketplace.API.Domain.RepositoriesContracts
 
         IQueryable<T> GetAll();
 
-        void Save(T entity);
+        T Save(T entity);
 
-        void Update(T entity);
+        T Update(T entity, int key);
 
         void Delete(T Entity);
+
     }
 }
