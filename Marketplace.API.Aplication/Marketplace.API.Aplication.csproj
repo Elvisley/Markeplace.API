@@ -8,4 +8,9 @@
   <ItemGroup>
     <Folder Include="Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Marketplace.API.Infrastructure\Marketplace.API.Infrastructure.csproj" />
+    <ProjectReference Include="..\Marketplace.API.CrossCutting\Marketplace.API.CrossCutting.csproj" />
+    <ProjectReference Include="..\Marketplace.API.Domain\Marketplace.API.Domain.csproj" />
+  </ItemGroup>
 </Project>
