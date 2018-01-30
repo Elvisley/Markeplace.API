@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Marketplace.API.Domain.RepositoriesContracts;
 using Marketplace.API.Infrastructure.Persistence;
+using Marketplace.API.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -25,7 +27,13 @@ namespace Marketplace.API.Service
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services )
         {
+
+            services.AddDbContext<MarketplaceContext>(options =>
+                            options.UseMySql("Server=localhost;Database=DB_MKTPLACE;Uid=root;Pwd=123456"));
+            
             services.AddMvc();
+            services.AddScoped(typeof(IRepositoryGeneric<>), typeof(RepositoryGeneric<>));
+            services.AddScoped(typeof(IRepositoryMarketplace), typeof(RepositoryMarketplace));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

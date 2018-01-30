@@ -1,59 +1,79 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Marketplace.API.Domain.RepositoriesContracts;
 using Marketplace.API.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Marketplace.API.Infrastructure.Repositories
 {
-    public class RepositoryGeneric<T> where T : class, IRepositoryGeneric<T>
+    public class RepositoryGeneric<T> : IRepositoryGeneric<T> where T : class
     {
-        protected MarketplaceContext _context;
+        private readonly MarketplaceContext _context;
+
 
         public RepositoryGeneric(MarketplaceContext _marketplaceContext)
         {
             this._context = _marketplaceContext;
+
         }
 
         public void Delete(T Entity)
         {
             try{
-                _context.Set<T>().Remove(Entity);    
+                _context.Set<T>().Remove(Entity);
+                _context.SaveChanges();
             }catch(Exception ex){
                 throw ex;
             }
         }
 
-        public T Get<TKey>(TKey id)
+        public T GetById<TKey>(TKey id)
         {
-            return _context.Set<T>().Find(id);
+            try{
+                return this._context.Set<T>().Find(id);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
-        public IQueryable<T> GetAll()
+        public IEnumerable<T> GetAll()
         {
-            return _context.Set<T>().ToList().AsQueryable();
+            try{
+                return this._context.Set<T>().AsNoTracking();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public T Save(T entity)
         {
-            _context.Set<T>().Add(entity);
-            _context.SaveChanges();
-            return entity;
+            try{
+                _context.Set<T>().Add(entity);
+                _context.SaveChanges();
+                return entity; 
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+           
         }
 
         public T Update(T entity, int key)
         {
-            if(entity == null){
-                return null;
-            }
-
-            T entityUpdtd = _context.Set<T>().Find(key);
-
-            if(entityUpdtd != null){
-                _context.Entry(entityUpdtd).CurrentValues.SetValues(entity);
+            try{
+                _context.Set<T>().Update(entity);
                 _context.SaveChanges();
+                return entity;
+            } catch (Exception ex) {
+                throw ex;
             }
 
-            return entityUpdtd;
 
         }
 

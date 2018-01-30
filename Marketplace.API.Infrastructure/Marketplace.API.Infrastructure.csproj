@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Marketplace.API.Domain\Marketplace.API.Domain.csproj" />
   </ItemGroup>
     
+  <ItemGroup>
+    <Compile Remove="Repositories\MarketplaceRepository.cs" />
+    <Compile Remove="Persistence\DbContextFactory.cs" />
+  </ItemGroup>
 </Project>

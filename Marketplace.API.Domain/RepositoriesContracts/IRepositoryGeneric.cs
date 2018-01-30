@@ -1,13 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Marketplace.API.Domain.RepositoriesContracts
 {
-    public interface IRepositoryGeneric<T>
+    public interface IRepositoryGeneric<T> where T : class
     {
-        T Get<TKey>(TKey id);
+        T GetById<TKey>(TKey id);
 
-        IQueryable<T> GetAll();
+        IEnumerable<T> GetAll();
 
         T Save(T entity);
 
