@@ -9,4 +9,7 @@
     <Folder Include="Domain\" />
     <Folder Include="RepositoriesContracts\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
 </Project>
